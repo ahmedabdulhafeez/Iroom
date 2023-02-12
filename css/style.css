@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --main-color: #dfdfdf;
+    --btn-color: #0042ff;
+    --btn-hov: #2b86f7;
+    --box-focus: #cacaca;
+    --box-color: #e4dada;
+    --text-color: white;
+}
+
+body{
+    background-image: url(../img/cool-background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    height: 100%;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    height: 225px;
+    width: 800px;
+    padding: 5px
+}
+
+form {
+    width: 800px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--text-color);
+}
+
+.row-one{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row-one .form-dest{
+    width: 450px;
+    height: 50px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.row-one .form-dest::before{
+    content: "";
+    border: 6px solid;
+    position: absolute;
+    border-color: var(--box-focus) transparent transparent transparent;
+    top: 50px;
+    right: 10px;
+}
+
+input{
+    padding: 10px;
+    border: 0;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: var(--box-focus);
+}
+
+label{
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--btn-color);
+}
+
+input:focus{
+    outline: none;
+    background-color: var(--box-color);
+}
+
+.row-one .form-dest input{
+    width: 450px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.row-one .form-chil{
+    margin-right: 20px;
+}
+
+.row-one .form-gust
+, .row-one .form-chil{
+    height: 50px;
+    width: 120px;
+}
+
+.row-one .form-gust input
+, .row-one .form-chil input{
+    width: 120px;
+}
+
+.row-two{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 60px;
+}
+
+.check-out
+, .check-in{
+    width: 212.5px;
+}
+
+.check-in{
+    margin-right: 25px;
+}
+
+.check-in input
+, .check-out input{
+    width: 212.5px;
+    color: rgba(0, 0, 0, 0.548);
+}
+
+.check-in input:focus{
+    color: black;
+}
+
+.check-out input:focus{
+    color: black;
+}
+
+.search-btn{
+    margin-right: 25px;
+    height: 60px;
+}
+
+.search-btn input{
+    width: 270px;
+    height: 75px;
+    color: white;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: var(--btn-color);
+    transition: all .3s ease;
+}
+
+.search-btn input:hover{
+    background-color: var(--btn-hov);
+}
+
+
+@media (max-width: 840px) {
+    .main-container{
+        width: 600px;
+    }
+
+    .row-one .form-dest{
+        width: 300px;
+    }
+
+    .row-one .form-dest input{
+        width: 300px;
+    }
+
+    .row-one .form-gust
+    , .row-one .form-chil{
+        width: 100px;
+    }
+
+    .row-one .form-gust input
+    , .row-one .form-chil input{
+        width: 100px;
+    }
+
+    .check-out
+    , .check-in{
+    width: 137.5px;
+    }
+
+    .check-in input
+    , .check-out input{
+    width: 137.5px;
+    }
+
+    .search-btn input{
+        width: 220px;
+    }
+}
+
+@media (max-width: 640px){
+    .main-container{
+        width: 350px;
+        height: 445px;
+    }
+
+    form{
+        height: 445px;
+    }
+
+    .row-one .form-dest{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 35px;
+    }
+
+    .row-one .form-dest input{
+        width: 100%;
+    }
+
+    .row-one .form-gust
+    , .row-one .form-chil{
+        width: 137.5px;
+    }
+
+    .row-one .form-gust input
+    , .row-one .form-chil input{
+        width: 137.5px;
+    }
+
+    .row-two{
+        margin-top: 35px;
+    }
+
+    .check-in{
+        margin-right: 0;
+    }
+
+    .check-out
+    , .check-in{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .check-in input
+    , .check-out input{
+        width: 100%;
+    }
+
+    .search-btn {
+        margin: 0;
+    }
+
+    .search-btn input{
+        width: 220px;
+        height: 60px;
+    }
+}
